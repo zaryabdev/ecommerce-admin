@@ -36,8 +36,8 @@ export const Modal: React.FC<ModelProps> = ({
                     <DialogTitle>{title}</DialogTitle>
                     <DialogDescription>{description}</DialogDescription>
                 </DialogHeader>
+                {children}
             </DialogContent>
-            {children}
         </Dialog>
     );
 };
