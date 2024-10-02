@@ -1,10 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-
+// import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+"use client";
+import { Modal } from "@/components/ui/model";
 const SetupPage = () => {
     return (
         <div>
-            <header>
+            <Modal isOpen title="Title" description="Dewc" onClose={() => {}}>
+                Children
+            </Modal>
+            {/* <header>
                 <SignedOut>
                     <SignInButton />
                 </SignedOut>
@@ -12,7 +15,7 @@ const SetupPage = () => {
                     <UserButton afterSwitchSessionUrl="/" />
                 </SignedIn>
             </header>
-            <Button>Click Me</Button>
+            <Button>Click Me</Button> */}
         </div>
     );
 };
