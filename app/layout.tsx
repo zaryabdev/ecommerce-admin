@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { ModalProvider } from "@/providers/modal-providers";
 import { ClerkProvider } from "@clerk/nextjs";
 
+import prismadb from "@/lib/prismadb";
 import "./globals.css";
 
 const geistSans = localFont({
