@@ -1,12 +1,26 @@
-// import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 "use client";
-import { Modal } from "@/components/ui/model";
+
+// import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+
+import { useStoreModal } from "@/hooks/use-store-model";
+import { useEffect } from "react";
+
 const SetupPage = () => {
+    const isOpen = useStoreModal((state) => state.isOpen);
+    const onOpen = useStoreModal((state) => state.onOpen);
+
+    useEffect(() => {
+        if (!isOpen) {
+            onOpen();
+        }
+    }, [isOpen, onOpen]);
+
     return (
-        <div>
-            <Modal isOpen title="Title" description="Dewc" onClose={() => {}}>
+        <div className="p-4">
+            Root Page
+            {/* <Modal isOpen title="Title" description="Dewc" onClose={() => {}}>
                 Children
-            </Modal>
+            </Modal> */}
             {/* <header>
                 <SignedOut>
                     <SignInButton />
