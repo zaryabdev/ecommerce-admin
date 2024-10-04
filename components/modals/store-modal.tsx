@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/form";
 import { Modal } from "@/components/ui/model";
 import { useStoreModal } from "@/hooks/use-store-model";
+import toast from "react-hot-toast";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
@@ -41,7 +42,9 @@ export const StoreModal = () => {
 
             const response = await axios.post("/api/stores", values);
             console.log(response.data);
+            toast.success("Store created.");
         } catch (error) {
+            toast.error("Something went wrong.");
             console.log(error);
         } finally {
             setLoading(false);

@@ -5,6 +5,7 @@ import { ModalProvider } from "@/providers/modal-providers";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import prismadb from "@/lib/prismadb";
+import { ToastProvider } from "@/providers/toast-providers";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -34,6 +35,7 @@ export default function RootLayout({
                 <body
                     className={`${geistSans.variable} ${geistMono.variable} antialiased`}
                 >
+                    <ToastProvider />
                     <ModalProvider />
                     {children}
                 </body>
