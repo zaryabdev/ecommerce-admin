@@ -28,8 +28,7 @@ const SetupPage = () => {
                 <SignedIn>
                     <UserButton afterSwitchSessionUrl="/" />
                 </SignedIn>
-            </header>
-            <Button>Click Me</Button> */}
+            </header> */}
         </div>
     );
 };
