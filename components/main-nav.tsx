@@ -28,6 +28,7 @@ const MainNav = ({
             {routes.map((route) => {
                 return (
                     <Link
+                        key={route.href}
                         href={route.href}
                         className={cn(
                             "text-sm font-medium transition-colors hover:text-primary",
