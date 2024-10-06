@@ -31,14 +31,13 @@ const MainNav = ({
                         key={route.href}
                         href={route.href}
                         className={cn(
-                            "text-sm font-medium transition-colors hover:text-primary",
+                            "text-sm  transition-colors hover:text-primary",
                             route.active
-                                ? "text-black dark:text-white"
-                                : "text-muted-background"
+                                ? "text-black font-semibold dark:text-white"
+                                : "font-medium text-muted-background"
                         )}
                     >
                         {route.label}
-                        {route.active ? "YES" : "NO"}
                     </Link>
                 );
             })}
